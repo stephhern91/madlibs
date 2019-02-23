@@ -5,7 +5,7 @@
     display: grid;
 
     justify-items: center;
-    grid-template-rows: [header-s] 218px [header-e card-s] 994px [card-e];
+    grid-template-rows: [header-s] 14rem [header-e card-s] 62rem [card-e];
 }
 
 .header {
@@ -56,16 +56,17 @@
 
 
 .card {
-    height: 994px;
-    width: 1240px;
+    height: 62rem;
+    width: 78rem;
     box-shadow: 0 4px 30px 0 rgba(0,0,0,0.06);
     border-radius: 7px;
 
     display: grid;
     grid-template-rows: 1fr 50px;
+    background-color: white;
 
     &__inputs {
-        background-color: skyblue;
+        // background-color: skyblue;
         display: grid;
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(4, 1fr);
@@ -80,14 +81,35 @@
     // grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: [number-s] 26px [number-e input-s] 1fr [input-e];
 
+    font-family: 'Montserrat';
+    text-align: center;
+
     &__title {
         grid-column: input-s/input-e;
 
+        border-top: 1px solid #B3B3B3;
+        color: #B3B3B3;
+        font-size: 12px;
+        font-weight: 300;
     }
+
     input {
         grid-column: input-s/input-e;
+        border: none;
+        font-size: 80%;
+        text-align: center;
     }
+
     &__number {
         grid-column: number-s/number-e;
+        
+        background-color: #00CB79;
+        color: white;
+        font-size: 90%;
+        text-align: center;
+        border-radius: 50%;
+        padding: 3px 2px 3px 2px;
+        margin-right: 2.5px;
+        margin-left: -1px;
     }
 }
